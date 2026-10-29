@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html { scroll-behavior: smooth; }
+body { @apply bg-ink text-slate-200 antialiased; font-family: 'Segoe UI', system-ui, -apple-system, sans-serif; }
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } * { animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+:focus-visible { outline: 3px solid #7dd3fc; outline-offset: 3px; border-radius: 4px; }
+.grid-bg { background-image: linear-gradient(rgba(125,211,252,.07) 1px, transparent 1px), linear-gradient(90deg, rgba(125,211,252,.07) 1px, transparent 1px); background-size: 48px 48px; mask-image: radial-gradient(ellipse at center, #000 30%, transparent 75%); }
+.card { @apply rounded-2xl border border-white/10 bg-panel/80 p-5 backdrop-blur transition-colors hover:border-accent/50; }
+.chip { @apply inline-block rounded-full border border-accent/30 bg-accent/10 px-3 py-1 text-xs text-sky-200; }
+.btn { @apply inline-flex items-center justify-center rounded-full px-6 py-3 text-sm font-semibold transition; }
